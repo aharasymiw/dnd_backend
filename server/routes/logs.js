@@ -3,14 +3,14 @@ var router = express.Router();
 var path = require('path');
 
 var mongoose = require('mongoose');
-var User = require('../models/users');
+var Log = require('../models/logs');
 
 //Need to bring in a Schema
-//Need a way to write a 'user' to the database
-//Need a way to retrieve users from the database
+//Need a way to write a 'log' to the database
+//Need a way to retrieve logs from the database
 
 router.get('/', function(req, res) {
-  User.find({}, function(err, data) {
+  Log.find({}, function(err, data) {
     if(err) {
       console.log('Error: ', err);
     }
@@ -19,18 +19,25 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  console.log(req.body.username);
+  console.log(req.body.logname);
 
-  var user = new User();
-  user.username = req.body.username;
+  var log = new Log();
+  log.logname = req.body.logname;
 
-  user.save(function(err, data) { //Node methods always have access to err as a first parameter, and mongoose returns data as a second
+  log.save(function(err, data) { //Node methods always have access to err as a first parameter, and mongoose returns data as a second
     if(err) {
       console.log('Error: ', err);
     }
 
     res.send(data); // Inside the save function, because it will run before save otherwise.
   });
+});
+
+router.put('/', function(req, res) {
+
+});
+
+router.delete('/', function(req, res) {
 
 });
 

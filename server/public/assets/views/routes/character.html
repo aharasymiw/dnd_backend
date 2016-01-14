@@ -1,0 +1,293 @@
+<form id='character' class="simple-form" novalidate>
+
+  <div> <!-- Start Top of Character Sheet -->
+
+    <input id='characterName' ng-model='character.characterName' type='text' name='characterName'>
+    <label for='characterName'> Character Name
+
+    <input id='class' ng-model='character.class' type='text' name='class'>
+    <label for='class'> Class
+
+    <input id='level' ng-model='character.level' type='text' name='level'>
+    <label for='level'> Level
+
+    <input id='background' ng-model='character.background' type='text' name='background'>
+    <label for='background'> Background
+
+    <input id='playerName' ng-model='character.playerName' type='text' name='playerName'>
+    <label for='playerName'> Player Name
+
+    <input id='race' ng-model='character.race' type='text' name='race'>
+    <label for='race'> Race
+
+    <input id='alignment' ng-model='character.alignment' type='text' name='alignment'>
+    <label for='alignment'> Alignment
+
+    <input id='experience' ng-model='character.experience' type='number' name='experience'>
+    <label for='experience'> Experience Points
+
+    <input id='dciNumber' ng-model='character.dciNumber' type='number' name='dciNumber'>
+    <label for='dciNumber'> DCI Number
+
+  </div> <!-- End Top of Character Sheet -->
+
+  <div> <!-- Start Left Column -->
+
+    <h2> Stats </h2>
+
+    <input id='strength' ng-model='character.strength' type='number' name='strength'>
+    <label for='strength'> Strength
+    <input id='strengthMod' ng-model='character.strengthMod' type='number' name='strengthMod'>
+    <label for='strengthMod'> Mod
+
+    <input id='dexterity' ng-model='character.dexterity' type='number' name='dexterity'>
+    <label for='dexterity'> Dexterity
+    <input id='dexterityMod' ng-model='character.dexterityMod' type='number' name='dexterityMod'>
+    <label for='dexterityMod'> Mod
+
+    <input id='constitution' ng-model='character.constitution' type='number' name='constitution'>
+    <label for='constitution'> Constitution
+    <input id='constitutionMod' ng-model='character.constitutionMod' type='number' name='constitutionMod'>
+    <label for='constitutionMod'> Mod
+
+    <input id='intelligence' ng-model='character.intelligence' type='number' name='intelligence'>
+    <label for='intelligence'> Intelligence
+    <input id='intelligenceMod' ng-model='character.intelligenceMod' type='number' name='intelligenceMod'>
+    <label for='intelligenceMod'> Mod
+
+    <input id='wisdom' ng-model='character.wisdom' type='number' name='wisdom'>
+    <label for='wisdom'> Wisdom
+    <input id='wisdomMod' ng-model='character.wisdomMod' type='number' name='wisdomMod'>
+    <label for='wisdomMod'> Mod
+
+    <input id='charisma' ng-model='character.charisma' type='number' name='charisma'>
+    <label for='charisma'> Charisma
+    <input id='charismaMod' ng-model='character.charismaMod' type='number' name='charismaMod'>
+    <label for='charismaMod'> Mod
+
+    <input id='inspiration' ng-model='character.inspiration' type='checkbox' name='inspiration'>
+    <label for='inspiration'> Inspiration
+
+    <input id='proficiency' ng-model='character.proficiency' type='number' name='proficiency'>
+    <label for='proficiency'> Proficiency
+
+    <h2> Saves </h2>
+
+    <input id='strengthSaveProficiency' ng-model='character.strengthSaveProficiency' type='checkbox' name='strengthSaveProficiency'>
+    <input id='strengthSave' ng-model='character.strengthSave' type='number' name='strengthSave'>
+    <label for='strengthSave'> Strength
+
+    <input id='dexteritySaveProficiency' ng-model='character.dexteritySaveProficiency' type='checkbox' name='dexteritySaveProficiency'>
+    <input id='dexteritySave' ng-model='character.dexteritySave' type='number' name='dexteritySave'>
+    <label for='dexteritySave'> Dexterity
+
+    <input id='constitutionSaveProficiency' ng-model='character.constitutionSaveProficiency' type='checkbox' name='constitutionSaveProficiency'>
+    <input id='constitutionSave' ng-model='character.constitutionSave' type='number' name='constitutionSave'>
+    <label for='constitutionSave'> Constitution
+
+    <input id='intelligenceSaveProficiency' ng-model='character.intelligenceSaveProficiency' type='checkbox' name='intelligenceSaveProficiency'>
+    <input id='intelligenceSave' ng-model='character.intelligenceSave' type='number' name='intelligenceSave'>
+    <label for='intelligenceSave'> Intelligence
+
+    <input id='wisdomSaveProficiency' ng-model='character.wisdomSaveProficiency' type='checkbox' name='wisdomSaveProficiency'>
+    <input id='wisdomSave' ng-model='character.wisdomSave' type='number' name='wisdomSave'>
+    <label for='wisdomSave'> Wisdom
+
+    <input id='charismaSaveProficiency' ng-model='character.charismaSaveProficiency' type='checkbox' name='charismaSaveProficiency'>
+    <input id='charismaSave' ng-model='character.charismaSave' type='number' name='charismaSave'>
+    <label for='charismaSave'> Charisma
+
+    <h2> Skills </h2>
+
+    <input id='acrobaticsProficiency' ng-model='character.acrobaticsProficiency' type='checkbox' name='acrobaticsProficiency'>
+    <input id='acrobatics' ng-model='character.acrobatics' type='number' name='acrobatics'>
+    <label for='acrobatics'> Acrobatics
+
+    <input id='animalHandlingProficiency' ng-model='character.animalHandlingProficiency' type='checkbox' name='animalHandlingProficiency'>
+    <input id='animalHandling' ng-model='character.animalHandling' type='number' name='animalHandling'>
+    <label for='animalHandling'> Animal Handling
+
+    <input id='arcanaProficiency' ng-model='character.arcanaProficiency' type='checkbox' name='arcanaProficiency'>
+    <input id='arcana' ng-model='character.arcana' type='number' name='arcana'>
+    <label for='arcana'> Arcana
+
+    <input id='athleticsProficiency' ng-model='character.athleticsProficiency' type='checkbox' name='athleticsProficiency'>
+    <input id='athletics' ng-model='character.athletics' type='number' name='athletics'>
+    <label for='athletics'> Athletics
+
+    <input id='deceptionProficiency' ng-model='character.deceptionProficiency' type='checkbox' name='deceptionProficiency'>
+    <input id='deception' ng-model='character.deception' type='number' name='deception'>
+    <label for='deception'> Deception
+
+    <input id='historyProficiency' ng-model='character.historyProficiency' type='checkbox' name='historyProficiency'>
+    <input id='history' ng-model='character.history' type='number' name='history'>
+    <label for='history'> History
+
+    <input id='insightProficiency' ng-model='character.insightProficiency' type='checkbox' name='insightProficiency'>
+    <input id='insight' ng-model='character.insight' type='number' name='insight'>
+    <label for='insight'> Insight
+
+    <input id='intimidationProficiency' ng-model='character.intimidationProficiency' type='checkbox' name='intimidationProficiency'>
+    <input id='intimidation' ng-model='character.intimidation' type='number' name='intimidation'>
+    <label for='intimidation'> Intimidation
+
+    <input id='investigationProficiency' ng-model='character.investigationProficiency' type='checkbox' name='investigationProficiency'>
+    <input id='investigation' ng-model='character.investigation' type='number' name='investigation'>
+    <label for='investigation'> Investigation
+
+    <input id='medicineProficiency' ng-model='character.medicineProficiency' type='checkbox' name='medicineProficiency'>
+    <input id='medicine' ng-model='character.medicine' type='number' name='medicine'>
+    <label for='medicine'> Medicine
+
+    <input id='natureProficiency' ng-model='character.natureProficiency' type='checkbox' name='natureProficiency'>
+    <input id='nature' ng-model='character.nature' type='number' name='nature'>
+    <label for='nature'> Nature
+
+    <input id='perceptionProficiency' ng-model='character.perceptionProficiency' type='checkbox' name='perceptionProficiency'>
+    <input id='perception' ng-model='character.perception' type='number' name='perception'>
+    <label for='perception'> Perception
+
+    <input id='performanceProficiency' ng-model='character.performanceProficiency' type='checkbox' name='performanceProficiency'>
+    <input id='performance' ng-model='character.performance' type='number' name='performance'>
+    <label for='performance'> Performance
+
+    <input id='persuasionProficiency' ng-model='character.persuasionProficiency' type='checkbox' name='persuasionProficiency'>
+    <input id='persuasion' ng-model='character.persuasion' type='number' name='persuasion'>
+    <label for='persuasion'> Persuasion
+
+    <input id='religionProficiency' ng-model='character.religionProficiency' type='checkbox' name='religionProficiency'>
+    <input id='religion' ng-model='character.religion' type='number' name='religion'>
+    <label for='religion'> Religion
+
+    <input id='slightOfHandProficiency' ng-model='character.slightOfHandProficiency' type='checkbox' name='slightOfHandProficiency'>
+    <input id='slightOfHand' ng-model='character.slightOfHand' type='number' name='slightOfHand'>
+    <label for='slightOfHand'> Slight Of Hand
+
+    <input id='stelthProficiency' ng-model='character.stelthProficiency' type='checkbox' name='stelthProficiency'>
+    <input id='stelth' ng-model='character.stelth' type='number' name='stelth'>
+    <label for='stelth'> Stelth
+
+    <input id='survivalProficiency' ng-model='character.survivalProficiency' type='checkbox' name='survivalProficiency'>
+    <input id='survival' ng-model='character.survival' type='number' name='survival'>
+    <label for='survival'> Survival
+
+    <input id='passivePerception' ng-model='character.passivePerception' type='number' name='passivePerception'>
+    <label for='passivePerception'> Passive Perception
+
+    <textarea id='proficiencies' ng-model='character.proficiencies' name='proficiencies'></textarea>
+
+    <label for='proficiencies'> Proficiencies
+
+    <textarea id='languages' ng-model='character.languages' name='languages'></textarea>
+    <label for='languages'> Languages
+
+  </div> <!-- End Left Column -->
+
+  <div> <!-- Start Middle Column -->
+
+    <input id='armorClass' ng-model='character.armorClass' type='number' name='armorClass'>
+    <label for='armorClass'> Armor Class
+
+    <input id='initiative' ng-model='character.initiative' type='number' name='initiative'>
+    <label for='initiative'> Initiative
+
+    <input id='speed' ng-model='character.speed' type='number' name='speed'>
+    <label for='speed'> Speed
+
+    <input id='hpMax' ng-model='character.hpMax' type='number' name='hpMax'>
+    <label for='hpMax'> Hit Point Maximum
+
+    <input id='hpCurrent' ng-model='character.hpCurrent' type='number' name='hpCurrent'>
+    <label for='hpCurrent'> Current Hit Points
+
+    <input id='hpTemp' ng-model='character.hpTemp' type='number' name='hpTemp'>
+    <label for='hpTemp'> Temporary Hit Points
+
+    <input id='hitDieTotal' ng-model='character.hitDieTotal' type='text' name='hitDieTotal'>
+    <label for='hitDieTotal'> Total
+
+    <input id='hitDie' ng-model='character.hitDie' type='text' name='hitDie'>
+    <label for='hitDie'> Hit Dice
+
+    <h2> Death Saves </h2>
+
+    <input id='deathSave1' ng-model='character.deathSave1' type='checkbox' name='deathSave1'>
+    <label for='deathSave1'> Death Save 1
+    <input id='deathSave2' ng-model='character.deathSave2' type='checkbox' name='deathSave2'>
+    <label for='deathSave2'> Death Save 2
+    <input id='deathSave3' ng-model='character.deathSave3' type='checkbox' name='deathSave3'>
+    <label for='deathSave3'> Death Save 3
+
+    <input id='deathFail1' ng-model='character.deathFail1' type='checkbox' name='deathFail1'>
+    <label for='deathFail1'> Death Fail 1
+    <input id='deathFail2' ng-model='character.deathFail2' type='checkbox' name='deathFail2'>
+    <label for='deathFail2'> Death Fail 2
+    <input id='deathFail3' ng-model='character.deathFail3' type='checkbox' name='deathFail3'>
+    <label for='deathFail3'> Death Fail 3
+
+    <h2> Attacks and Spellcasting </h2>
+
+    <input id='attack1' ng-model='character.attack1' type='text' name='attack1'>
+    <label for='attack1'> Attack 1
+    <input id='attackBonus1' ng-model='character.attackBonus1' type='number' name='attackBonus1'>
+    <label for='attackBonus1'> Attack 1 bonus
+    <input id='attackDamage1' ng-model='character.attackDamage1' type='text' name='attackDamage1'>
+    <label for='attackDamage1'> Attack 1 damage
+
+    <input id='attack1' ng-model='character.attack1' type='text' name='attack1'>
+    <label for='attack1'> Attack 1
+    <input id='attackBonus1' ng-model='character.attackBonus1' type='number' name='attackBonus1'>
+    <label for='attackBonus1'> Attack 1 bonus
+    <input id='attackDamage1' ng-model='character.attackDamage1' type='text' name='attackDamage1'>
+    <label for='attackDamage1'> Attack 1 damage
+
+    <input id='attack1' ng-model='character.attack1' type='text' name='attack1'>
+    <label for='attack1'> Attack 1
+    <input id='attackBonus1' ng-model='character.attackBonus1' type='number' name='attackBonus1'>
+    <label for='attackBonus1'> Attack 1 bonus
+    <input id='attackDamage1' ng-model='character.attackDamage1' type='text' name='attackDamage1'>
+    <label for='attackDamage1'> Attack 1 damage
+
+    <textarea id='attackNotes' ng-model='character.attackNotes' name='attackNotes'></textarea>
+    <label for='attackNotes'> Attack Notes
+
+    <input id='copper' ng-model='character.copper' type='number' name='copper'>
+    <label for='copper'> Copper
+    <input id='silver' ng-model='character.silver' type='number' name='silver'>
+    <label for='silver'> Silver
+    <input id='electrum' ng-model='character.electrum' type='number' name='electrum'>
+    <label for='electrum'> Electrum
+    <input id='gold' ng-model='character.gold' type='number' name='gold'>
+    <label for='gold'> Gold
+    <input id='platinum' ng-model='character.platinum' type='number' name='platinum'>
+    <label for='platinum'> Platinum
+
+    <textarea id='equipment' ng-model='character.equipment' name='equipment'></textarea>
+    <label for='equipment'> Equipment
+
+    <!-- Equipment -->
+
+  </div> <!-- End Middle Column -->
+
+  <div> <!-- Start Right Column -->
+
+    <textarea id='personalityTraits' ng-model='character.personalityTraits' name='personalityTraits'></textarea>
+    <label for='personalityTraits'> Personality Traits
+
+    <textarea id='ideals' ng-model='character.ideals' name='ideals'></textarea>
+    <label for='ideals'> Ideals
+
+    <textarea id='bonds' ng-model='character.bonds' name='bonds'></textarea>
+    <label for='bonds'> Bonds
+
+    <textarea id='flaws' ng-model='character.flaws' name='flaws'></textarea>
+    <label for='flaws'> Flaws
+
+    <textarea id='featuresTraits' ng-model='character.featuresTraits' name='featuresTraits'></textarea>
+    <label for='featuresTraits'> Features and Traits
+
+  </div> <!-- End Right Column -->
+
+  <input type="submit" ng-click="someAwesomeFunction()" value="Save" />
+
+</form>

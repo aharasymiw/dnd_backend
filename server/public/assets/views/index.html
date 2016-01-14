@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
+
   <head>
     <meta charset="UTF-8">
-    <title>Whatevs</title>
-
-    <script type="text/javascript" src="vendors/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/scripts/app.js"></script>
+    <title>Public Play Tracker</title>
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/styles.css">
   </head>
-  <body>
-    <form id="catform">
-      <label for="username"> Cat User Name:
-      <input type="text" name="username" id="username">
-      <input type="submit" value="Submit">
 
-      <div id="container">
-      </div>
+  <body>
+    <header ng-include="'/assets/views/templates/header.html'"></header>
+    <nav ng-include="'/assets/views/templates/nav.html'"></nav>
+    <main ng-view></main>
+    <footer ng-include="'/assets/views/templates/footer.html'"></footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers.js"></script>
+
   </body>
 </html>

@@ -1,7 +1,7 @@
 {
-  "name": "dNd",
+  "name": "Public_Play_Tracker",
   "version": "0.1.0",
-  "description": "",
+  "description": "An adventure log sheet and character sheet tracker for D&D Adventurers League.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,8 +12,8 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
-    "jquery": "^2.1.4",
     "mongoose": "^4.3.4",
+    "serve-favicon": "~2.3.0",
     "path": "^0.12.7"
   }
 }

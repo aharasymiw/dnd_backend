@@ -2,14 +2,14 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var userSchema = new Schema(
+var logSchema = new Schema(
   {
     //key: valueType,
-    username: String
+    logname: String
   }
 );
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Log', logSchema);
 
 /* Cool things you can do with Schemas
 {
