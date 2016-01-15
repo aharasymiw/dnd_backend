@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var characterSchema = new Schema(
   {
     //key: valueType,
-    charactername: String
+    character: Object
   }
 );
 

@@ -19,10 +19,10 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  console.log(req.body.charactername);
+  console.log(req.body);
 
   var character = new Character();
-  character.charactername = req.body.charactername;
+  character = req.body;
 
   character.save(function(err, data) { //Node methods always have access to err as a first parameter, and mongoose returns data as a second
     if(err) {
