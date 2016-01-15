@@ -1,12 +1,28 @@
 (function() {
-app.controller('CharacterController', ['$http', function($http) {
+app.controller('CharacterController', ['$scope', '$http',
+function($scope, $http) {
 
-  console.log('Character Controller Active.');
-  this.character = {};
+  $scope.character = {};
 
-  function saveCharacter() {
-    console.log('Clicked');
-  }
+  $scope.saveCharacter = function(character) {
+    $http.post('/characters', character)
+
+    .then(function successCallback(response) {
+      alert($scope.character.characterName + ' has been saved!');
+      $scope.character = {};
+    }, function errorCallback(response) {
+    });
+  };
+
+  $scope.getCharacter = function(character) {
+    $http.get('/characters', config)
+    .then(function successCallback(response) {
+      console.log('Status: ' + response.status);
+      alert($scope.character.characterName + ' has been saved!');
+      $scope.character = {};
+    }, function errorCallback(response) {
+    });
+  };
 
 }]);
 })();

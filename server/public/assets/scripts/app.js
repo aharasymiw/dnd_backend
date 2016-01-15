@@ -8,7 +8,7 @@ app.config(['$routeProvider', function($routeProvider) {
     }).
     when('/character', {
       templateUrl: '/assets/views/routes/character.html',
-      controller: 'CharacterController as charControle'
+      controller: 'CharacterController'
     }).
     when('/log', {
       templateUrl: '/assets/views/routes/log.html',

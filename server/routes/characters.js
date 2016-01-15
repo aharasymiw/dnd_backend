@@ -1,3 +1,4 @@
+// Server Character Router
 var express = require('express');
 var router = express.Router();
 var path = require('path');
@@ -9,7 +10,7 @@ var Character = require('../models/characters');
 //Need a way to write a 'character' to the database
 //Need a way to retrieve characters from the database
 
-router.get('/', function(req, res) {
+/*router.get('/:id', function(req, res) {
   Character.find({}, function(err, data) {
     if(err) {
       console.log('Error: ', err);
@@ -17,19 +18,29 @@ router.get('/', function(req, res) {
     res.send(data);
   });
 });
+*/
 
-router.post('/', function(req, res) {
-  console.log(req.body);
-
-  var character = new Character();
-  character = req.body;
-
-  character.save(function(err, data) { //Node methods always have access to err as a first parameter, and mongoose returns data as a second
+router.get('/', function(req, res) {
+  Character.find({}, function(err, characters) {
     if(err) {
       console.log('Error: ', err);
     }
+    console.log(characters);
+    res.send(characters);
+  });
+});
 
-    res.send(data); // Inside the save function, because it will run before save otherwise.
+router.post('/', function(req, res) {
+  var currentTime = Date.now();
+  req.body.lastEdited = currentTime;
+  req.body.dateCreated = currentTime;
+  console.log(req.body);
+
+  var character = new Character();
+
+  Character.create(req.body, function(err, small) {
+    if (err) {return handleError(err);}
+    res.send();
   });
 });
 
