@@ -8,6 +8,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/*', function(req, res) {
+  console.log(req.params[0]);
   var file = req.params[0] || 'assets/views/index.html';
   res.sendFile(path.join(__dirname, '../public/', file));
 });

@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var logSchema = new Schema(
   {
     //key: valueType,
-    logname: String
+    date: Date
   }
 );
 

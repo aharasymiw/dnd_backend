@@ -20,21 +20,20 @@ var Character = require('../models/characters');
 });
 */
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
   Character.find({}, function(err, characters) {
     if(err) {
       console.log('Error: ', err);
     }
-    console.log(characters);
     res.send(characters);
   });
 });
 
-router.post('/', function(req, res) {
+router.post('/', function(req, res, next) {
   var currentTime = Date.now();
+
   req.body.lastEdited = currentTime;
   req.body.dateCreated = currentTime;
-  console.log(req.body);
 
   var character = new Character();
 
@@ -44,11 +43,11 @@ router.post('/', function(req, res) {
   });
 });
 
-router.put('/', function(req, res) {
+router.put('/', function(req, res, next) {
 
 });
 
-router.delete('/', function(req, res) {
+router.delete('/', function(req, res, next) {
 
 });
 

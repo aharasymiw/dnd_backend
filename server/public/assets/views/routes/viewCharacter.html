@@ -1,8 +1,298 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
         <ul class="nav nav-pills nav-justified">
-            <li><a href="#newCharacter">Create</a></li>
-            <li><a href="#viewCharacter">View Existing</a></li>
+            <li><a href="#character/new">Create</a></li>
+            <li><a href="#character/view">View Existing</a></li>
+            <li><a href="#character/edit">Edit Existing</a></li>
         </ul>
     </div>
+</div>
+
+<button ng-click="getCharacter()">Get Your Characters</button>
+
+<div ng-repeat="character in characters">
+
+  <div> <!-- Start Top of Character Sheet -->
+
+    <p>{{"character.characterName"}}</p>
+    <p> Character Name </p>
+
+    <p ng-model="character.characterClass" type="text" </p>
+    <p> Class </p>
+
+    <p ng-model="character.level" type="text" </p>
+    <p> Level </p>
+
+    <p ng-model="character.background" type="text" </p>
+    <p> Background </p>
+
+    <p ng-model="character.playerName" type="text" </p>
+    <p> Player Name </p>
+
+    <p ng-model="character.race" type="text" </p>
+    <p> Race </p>
+
+    <p ng-model="character.alignment" type="text" </p>
+    <p> Alignment </p>
+
+    <p ng-model="character.experience" type="number" </p>
+    <p> Experience Points </p>
+
+    <p ng-model="character.dciNumber" type="number" </p>
+    <p> DCI Number </p>
+
+  </div> <!-- End Top of Character Sheet -->
+
+  <div> <!-- Start Left Column -->
+
+    <h2> Stats </h2>
+
+    <p ng-model="character.strength" type="number" </p>
+    <p> Strength </p>
+    <p ng-model="character.strengthMod" type="number" </p>
+    <p> Mod </p>
+
+    <p ng-model="character.dexterity" type="number" </p>
+    <p> Dexterity </p>
+    <p ng-model="character.dexterityMod" type="number" </p>
+    <p> Mod </p>
+
+    <p ng-model="character.constitution" type="number" </p>
+    <p> Constitution </p>
+    <p ng-model="character.constitutionMod" type="number" </p>
+    <p> Mod </p>
+
+    <p ng-model="character.intelligence" type="number" </p>
+    <p> Intelligence </p>
+    <p ng-model="character.intelligenceMod" type="number" </p>
+    <p> Mod </p>
+
+    <p ng-model="character.wisdom" type="number" </p>
+    <p> Wisdom </p>
+    <p ng-model="character.wisdomMod" type="number" </p>
+    <p> Mod </p>
+
+    <p ng-model="character.charisma" type="number" </p>
+    <p> Charisma </p>
+    <p ng-model="character.charismaMod" type="number" </p>
+    <p> Mod </p>
+
+    <p ng-model="character.inspiration" type="checkbox" </p>
+    <p> Inspiration </p>
+
+    <p ng-model="character.proficiency" type="number" </p>
+    <p> Proficiency </p>
+
+    <h2> Saves </h2>
+
+    <p ng-model="character.strengthSaveProficiency" type="checkbox" </p>
+    <p ng-model="character.strengthSave" type="number" </p>
+    <p> Strength </p>
+
+    <p ng-model="character.dexteritySaveProficiency" type="checkbox" </p>
+    <p ng-model="character.dexteritySave" type="number" </p>
+    <p> Dexterity </p>
+
+    <p ng-model="character.constitutionSaveProficiency" type="checkbox" </p>
+    <p ng-model="character.constitutionSave" type="number" </p>
+    <p> Constitution </p>
+
+    <p ng-model="character.intelligenceSaveProficiency" type="checkbox" </p>
+    <p ng-model="character.intelligenceSave" type="number" </p>
+    <p> Intelligence </p>
+
+    <p ng-model="character.wisdomSaveProficiency" type="checkbox" </p>
+    <p ng-model="character.wisdomSave" type="number" </p>
+    <p> Wisdom </p>
+
+    <p ng-model="character.charismaSaveProficiency" type="checkbox" </p>
+    <p ng-model="character.charismaSave" type="number" </p>
+    <p> Charisma </p>
+
+    <h2> Skills </h2>
+
+    <p ng-model="character.acrobaticsProficiency" type="checkbox" </p>
+    <p ng-model="character.acrobatics" type="number" </p>
+    <p> Acrobatics </p>
+
+    <p ng-model="character.animalHandlingProficiency" type="checkbox" </p>
+    <p ng-model="character.animalHandling" type="number" </p>
+    <p> Animal Handling </p>
+
+    <p ng-model="character.arcanaProficiency" type="checkbox" </p>
+    <p ng-model="character.arcana" type="number" </p>
+    <p> Arcana </p>
+
+    <p ng-model="character.athleticsProficiency" type="checkbox" </p>
+    <p ng-model="character.athletics" type="number" </p>
+    <p> Athletics </p>
+
+    <p ng-model="character.deceptionProficiency" type="checkbox" </p>
+    <p ng-model="character.deception" type="number" </p>
+    <p> Deception </p>
+
+    <p ng-model="character.historyProficiency" type="checkbox" </p>
+    <p ng-model="character.history" type="number" </p>
+    <p> History </p>
+
+    <p ng-model="character.insightProficiency" type="checkbox" </p>
+    <p ng-model="character.insight" type="number" </p>
+    <p> Insight </p>
+
+    <p ng-model="character.intimidationProficiency" type="checkbox" </p>
+    <p ng-model="character.intimidation" type="number" </p>
+    <p> Intimidation </p>
+
+    <p ng-model="character.investigationProficiency" type="checkbox" </p>
+    <p ng-model="character.investigation" type="number" </p>
+    <p> Investigation </p>
+
+    <p ng-model="character.medicineProficiency" type="checkbox" </p>
+    <p ng-model="character.medicine" type="number" </p>
+    <p> Medicine </p>
+
+    <p ng-model="character.natureProficiency" type="checkbox" </p>
+    <p ng-model="character.nature" type="number" </p>
+    <p> Nature </p>
+
+    <p ng-model="character.perceptionProficiency" type="checkbox" </p>
+    <p ng-model="character.perception" type="number" </p>
+    <p> Perception </p>
+
+    <p ng-model="character.performanceProficiency" type="checkbox" </p>
+    <p ng-model="character.performance" type="number" </p>
+    <p> Performance </p>
+
+    <p ng-model="character.persuasionProficiency" type="checkbox" </p>
+    <p ng-model="character.persuasion" type="number" </p>
+    <p> Persuasion </p>
+
+    <p ng-model="character.religionProficiency" type="checkbox" </p>
+    <p ng-model="character.religion" type="number" </p>
+    <p> Religion </p>
+
+    <p ng-model="character.slightOfHandProficiency" type="checkbox" </p>
+    <p ng-model="character.slightOfHand" type="number" </p>
+    <p> Slight Of Hand </p>
+
+    <p ng-model="character.stelthProficiency" type="checkbox" </p>
+    <p ng-model="character.stelth" type="number" </p>
+    <p> Stelth </p>
+
+    <p ng-model="character.survivalProficiency" type="checkbox" </p>
+    <p ng-model="character.survival" type="number" </p>
+    <p> Survival </p>
+
+    <p ng-model="character.passivePerception" type="number" </p>
+    <p> Passive Perception </p>
+
+    <p ng-model="character.proficiencies" </p>
+    <p> Proficiencies </p>    <p ng-model="character.languages" </p>
+    <p> Languages </p>
+
+  </div> <!-- End Left Column -->
+
+  <div> <!-- Start Middle Column -->
+
+    <p ng-model="character.armorClass" type="number" </p>
+    <p> Armor Class </p>
+
+    <p ng-model="character.initiative" type="number" </p>
+    <p> Initiative </p>
+
+    <p ng-model="character.speed" type="number" </p>
+    <p> Speed </p>
+
+    <p ng-model="character.hpMax" type="number" </p>
+    <p> Hit Point Maximum </p>
+
+    <p ng-model="character.hpCurrent" type="number" </p>
+    <p> Current Hit Points </p>
+
+    <p ng-model="character.hpTemp" type="number" </p>
+    <p for="hpTemp"> Temporary Hit Points </p>
+
+    <p id="hitDieTotal" ng-model="character.hitDieTotal" type="text" </p>
+    <p for="hitDieTotal"> Total </p>
+
+    <p id="hitDie" ng-model="character.hitDie" type="text" </p>
+    <p for="hitDie"> Hit Dice </p>
+
+    <h2> Death Saves </h2>
+
+    <p ng-model="character.deathSave1" type="checkbox" </p>
+    <p> Death Save 1 </p>
+    <p ng-model="character.deathSave2" type="checkbox" </p>
+    <p> Death Save 2 </p>
+    <p ng-model="character.deathSave3" type="checkbox" </p>
+    <p> Death Save 3 </p>
+
+    <p ng-model="character.deathFail1" type="checkbox" </p>
+    <p> Death Fail 1 </p>
+    <p ng-model="character.deathFail2" type="checkbox" </p>
+    <p> Death Fail 2 </p>
+    <p ng-model="character.deathFail3" type="checkbox" </p>
+    <p> Death Fail 3 </p>
+
+    <h2> Attacks and Spellcasting </h2>
+
+    <p ng-model="character.attack1" type="text" </p>
+    <p> Attack 1 </p>
+    <p ng-model="character.attackBonus1" type="number" </p>
+    <p> Attack 1 bonus </p>
+    <p ng-model="character.attackDamage1" type="text" </p>
+    <p> Attack 1 damage </p>
+
+    <p ng-model="character.attack2" type="text" </p>
+    <p> Attack 2 </p>
+    <p ng-model="character.attackBonus2" type="number" </p>
+    <p> Attack 2 bonus </p>
+    <p ng-model="character.attackDamage2" type="text" </p>
+    <p> Attack 2 damage </p>
+
+    <p ng-model="character.attack3" type="text" </p>
+    <p> Attack 3 </p>
+    <p ng-model="character.attackBonus3" type="number" </p>
+    <p> Attack 3 bonus </p>
+    <p ng-model="character.attackDamage3" type="text" </p>
+    <p> Attack 3 damage </p>
+
+    <p ng-model="character.attackNotes" </p>
+    <p> Attack Notes </p>
+
+    <p ng-model="character.copper" type="number" </p>
+    <p> Copper </p>
+    <p ng-model="character.silver" type="number" </p>
+    <p> Silver </p>
+    <p ng-model="character.electrum" type="number" </p>
+    <p> Electrum </p>
+    <p ng-model="character.gold" type="number" </p>
+    <p> Gold </p>
+    <p ng-model="character.platinum" type="number" </p>
+    <p> Platinum </p>
+
+    <p ng-model="character.equipment" </p>
+    <p> Equipment </p>
+
+  </div> <!-- End Middle Column -->
+
+  <div> <!-- Start Right Column -->
+
+    <p ng-model="character.personalityTraits" </p>
+    <p> Personality Traits </p>
+
+    <p ng-model="character.ideals" </p>
+    <p> Ideals </p>
+
+    <p ng-model="character.bonds" </p>
+    <p> Bonds </p>
+
+    <p ng-model="character.flaws" </p>
+    <p> Flaws </p>
+
+    <p ng-model="character.featuresTraits" </p>
+    <p> Features and Traits </p>
+
+  </div> <!-- End Right Column -->
+
 </div>
