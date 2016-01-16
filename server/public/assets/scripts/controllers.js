@@ -43,7 +43,6 @@ function($scope, $http) {
   $scope.getLog = function(log) {
     $http.get('/logs', config)
     .then(function successCallback(response) {
-      console.log('Status: ' + response.status);
     }, function errorCallback(response) {
     });
   };
