@@ -1,9 +1,82 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
         <ul class="nav nav-pills nav-justified">
-            <li><a href="#log/new">Create</a></li>
-            <li><a href="#log/view">View Existing</a></li>
-            <li><a href="#log/edit">Edit Existing</a></li>
+            <li><a href="log/new">Create Log</a></li>
+            <li><a href="log/view">View Logs</a></li>
+            <li><a href="log/edit">Edit Logs</a></li>
         </ul>
     </div>
 </div>
+
+<form id="log" novalidate>
+
+  <div> <!-- Start Top of Log Sheet -->
+
+    <input id="adventureName" ng-model="log.adventureName" type="text">
+    <label for="adventureName"> Adventure Name
+
+    <input id="sessionNum" ng-model="log.sessionNum" type="number">
+    <label for="sessionNum"> Session #
+
+    <input id="playDate" ng-model="log.playDate" type="date" required>
+    <label for="playDate"> Date
+
+    <input id="nameDM" ng-model="log.nameDM" type="text">
+    <label for="nameDM"> DM Name
+
+    <input id="dciDM" ng-model="log.dciDM" type="number">
+    <label for="dciDM"> DM DCI#
+
+    <input id="startingXP" ng-model="log.startingXP" type="number">
+    <label for="startingXP"> Starting XP
+
+    <input id="deltaXP" ng-model="log.deltaXP" type="number">
+    <label for="deltaXP"> XP Earned
+
+    <input id="totalXP" ng-model="log.totalXP" type="number">
+    <label for="totalXP"> XP Total
+
+    <input id="staringGold" ng-model="log.staringGold" type="number">
+    <label for="staringGold"> Starting Gold
+
+    <input id="deltaGold" ng-model="log.deltaGold" type="number">
+    <label for="deltaGold"> Gold +/-
+
+    <input id="totalGold" ng-model="log.totalGold" type="number">
+    <label for="totalGold"> Gold Total
+
+    <input id="startingDowntime" ng-model="log.startingDowntime" type="number">
+    <label for="startingDowntime"> Starting Downtime
+
+    <input id="deltaDowntime" ng-model="log.deltaDowntime" type="number">
+    <label for="deltaDowntime"> Downtime +/-
+
+    <input id="totalDowntime" ng-model="log.totalDowntime" type="number">
+    <label for="totalDowntime"> Downtime Total
+
+    <input id="startingRenown" ng-model="log.startingRenown" type="number">
+    <label for="startingRenown"> Starting Renown
+
+    <input id="deltaRenown" ng-model="log.deltaRenown" type="number">
+    <label for="deltaRenown"> Renown Earned
+
+    <input id="totalRenown" ng-model="log.totalRenown" type="number">
+    <label for="totalRenown"> Renown Total
+
+    <input id="startingMagic" ng-model="log.startingMagic" type="number">
+    <label for="startingMagic"> Starting # of Magic Items
+
+    <input id="deltaMagic" ng-model="log.deltaMagic" type="number">
+    <label for="deltaMagic"> Magic Items +/-
+
+    <input id="totalMagic" ng-model="log.totalMagic" type="number">
+    <label for="totalMagic"> Magic Items Total
+
+    <textarea id="adventureNotes" ng-model="log.adventureNotes"></textarea>
+    <label for="adventureNotes"> Adventure Notes/Downtime Activity
+
+  </div> <!-- End Top of Log Sheet -->
+
+  <md-button ng-click="saveLog(log)" class="md-raised">Save</md-button>
+
+</form>

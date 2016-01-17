@@ -1,14 +1,14 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
         <ul class="nav nav-pills nav-justified">
-            <li><a href="#character/new">Create</a></li>
-            <li><a href="#character/view">View Existing</a></li>
-            <li><a href="#character/edit">Edit Existing</a></li>
+            <li><a href="character/new">Create Character</a></li>
+            <li><a href="character/view">View Characters</a></li>
+            <li><a href="character/edit">Edit Characters</a></li>
         </ul>
     </div>
 </div>
 
-<button ng-click="getCharacter()">Get Your Characters</button>
+<md-button ng-click="getCharacters()" class="md-raised">Get Your Characters</md-button>
 
 <div ng-repeat="character in characters.data">
 
@@ -36,10 +36,10 @@
     <p ng-show="character.alignment"> Alignment </p>
 
     {{character.experience}}
-    <p ng-show="character.experience"> Experience Points </p>
+    <p ng-show="character.experience >= -3"> Experience Points </p>
 
-    {{character.dciNumber}}
-    <p ng-show="character.dciNumber"> DCI Number </p>
+    {{character.dciPlayer}}
+    <p ng-show="character.dciPlayer >= -3"> DCI Number </p>
 
   </div> <!-- End Top of Character Sheet -->
 
@@ -48,143 +48,143 @@
     <h2> Stats </h2>
 
     {{character.strength}}
-    <p ng-show="character.strength"> Strength </p>
+    <p ng-show="character.strength >= -3"> Strength </p>
     {{character.strengthMod}}
-    <p ng-show="character.strengthMod"> Mod </p>
+    <p ng-show="character.strengthMod >= -3"> Mod </p>
 
     {{character.dexterity}}
-    <p ng-show="character.dexterity"> Dexterity </p>
+    <p ng-show="character.dexterity >= -3"> Dexterity </p>
     {{character.dexterityMod}}
-    <p ng-show="character.dexterityMod"> Mod </p>
+    <p ng-show="character.dexterityMod >= -3"> Mod </p>
 
     {{character.constitution}}
-    <p ng-show="character.constitution"> Constitution </p>
+    <p ng-show="character.constitution >= -3"> Constitution </p>
     {{character.constitutionMod}}
-    <p ng-show="character.constitutionMod"> Mod </p>
+    <p ng-show="character.constitutionMod >= -3"> Mod </p>
 
     {{character.intelligence}}
-    <p ng-show="character.intelligence"> Intelligence </p>
+    <p ng-show="character.intelligence >= -3"> Intelligence </p>
     {{character.intelligenceMod}}
-    <p ng-show="character.intelligenceMod"> Mod </p>
+    <p ng-show="character.intelligenceMod >= -3"> Mod </p>
 
     {{character.wisdom}}
-    <p ng-show="character.wisdom"> Wisdom </p>
+    <p ng-show="character.wisdom >= -3"> Wisdom </p>
     {{character.wisdomMod}}
-    <p ng-show="character.wisdomMod"> Mod </p>
+    <p ng-show="character.wisdomMod >= -3"> Mod </p>
 
     {{character.charisma}}
-    <p ng-show="character.charisma"> Charisma </p>
+    <p ng-show="character.charisma >= -3"> Charisma </p>
     {{character.charismaMod}}
-    <p ng-show="character.charismaMod"> Mod </p>
+    <p ng-show="character.charismaMod >= -3"> Mod </p>
 
     {{character.inspiration}}
     <p ng-show="character.inspiration"> Inspiration </p>
 
     {{character.proficiency}}
-    <p ng-show="character.proficiency"> Proficiency </p>
+    <p ng-show="character.proficiency >= -3"> Proficiency </p>
 
     <h2> Saves </h2>
 
     {{character.strengthSaveProficiency}}
     {{character.strengthSave}}
-    <p ng-show="character.strengthSave"> Strength </p>
+    <p ng-show="character.strengthSave >= -3"> Strength </p>
 
     {{character.dexteritySaveProficiency}}
     {{character.dexteritySave}}
-    <p ng-show="character.dexteritySave"> Dexterity </p>
+    <p ng-show="character.dexteritySave >= -3"> Dexterity </p>
 
     {{character.constitutionSaveProficiency}}
     {{character.constitutionSave}}
-    <p ng-show="character.constitutionSave"> Constitution </p>
+    <p ng-show="character.constitutionSave >= -3"> Constitution </p>
 
     {{character.intelligenceSaveProficiency}}
     {{character.intelligenceSave}}
-    <p ng-show="character.intelligenceSave"> Intelligence </p>
+    <p ng-show="character.intelligenceSave >= -3"> Intelligence </p>
 
     {{character.wisdomSaveProficiency}}
     {{character.wisdomSave}}
-    <p ng-show="character.wisdomSave"> Wisdom </p>
+    <p ng-show="character.wisdomSave >= -3"> Wisdom </p>
 
     {{character.charismaSaveProficiency}}
     {{character.charismaSave}}
-    <p ng-show="character.charismaSave"> Charisma </p>
+    <p ng-show="character.charismaSave >= -3"> Charisma </p>
 
     <h2> Skills </h2>
 
     {{character.acrobaticsProficiency}}
     {{character.acrobatics}}
-    <p ng-show="character.acrobatics"> Acrobatics </p>
+    <p ng-show="character.acrobatics >= -3"> Acrobatics </p>
 
     {{character.animalHandlingProficiency}}
     {{character.animalHandling}}
-    <p ng-show="character.animalHandling"> Animal Handling </p>
+    <p ng-show="character.animalHandling >= -3"> Animal Handling </p>
 
     {{character.arcanaProficiency}}
     {{character.arcana}}
-    <p ng-show="character.arcana"> Arcana </p>
+    <p ng-show="character.arcana >= -3"> Arcana </p>
 
     {{character.athleticsProficiency}}
     {{character.athletics}}
-    <p ng-show="character.athletics"> Athletics </p>
+    <p ng-show="character.athletics >= -3"> Athletics </p>
 
     {{character.deceptionProficiency}}
     {{character.deception}}
-    <p ng-show="character.deception"> Deception </p>
+    <p ng-show="character.deception >= -3"> Deception </p>
 
     {{character.historyProficiency}}
     {{character.history}}
-    <p ng-show="character.history"> History </p>
+    <p ng-show="character.history >= -3"> History </p>
 
     {{character.insightProficiency}}
     {{character.insight}}
-    <p ng-show="character.insight"> Insight </p>
+    <p ng-show="character.insight >= -3"> Insight </p>
 
     {{character.intimidationProficiency}}
     {{character.intimidation}}
-    <p ng-show="character.intimidation"> Intimidation </p>
+    <p ng-show="character.intimidation >= -3"> Intimidation </p>
 
     {{character.investigationProficiency}}
     {{character.investigation}}
-    <p ng-show="character.investigation"> Investigation </p>
+    <p ng-show="character.investigation >= -3"> Investigation </p>
 
     {{character.medicineProficiency}}
     {{character.medicine}}
-    <p ng-show="character.medicine"> Medicine </p>
+    <p ng-show="character.medicine >= -3"> Medicine </p>
 
     {{character.natureProficiency}}
     {{character.nature}}
-    <p ng-show="character.nature"> Nature </p>
+    <p ng-show="character.nature >= -3"> Nature </p>
 
     {{character.perceptionProficiency}}
     {{character.perception}}
-    <p ng-show="character.perception"> Perception </p>
+    <p ng-show="character.perception >= -3"> Perception </p>
 
     {{character.performanceProficiency}}
     {{character.performance}}
-    <p ng-show="character.performance"> Performance </p>
+    <p ng-show="character.performance >= -3"> Performance </p>
 
     {{character.persuasionProficiency}}
     {{character.persuasion}}
-    <p ng-show="character.persuasion"> Persuasion </p>
+    <p ng-show="character.persuasion >= -3"> Persuasion </p>
 
     {{character.religionProficiency}}
     {{character.religion}}
-    <p ng-show="character.religion"> Religion </p>
+    <p ng-show="character.religion >= -3"> Religion </p>
 
     {{character.slightOfHandProficiency}}
     {{character.slightOfHand}}
-    <p ng-show="character.slightOfHand"> Slight Of Hand </p>
+    <p ng-show="character.slightOfHand >= -3"> Slight Of Hand </p>
 
     {{character.stelthProficiency}}
     {{character.stelth}}
-    <p ng-show="character.stelth"> Stelth </p>
+    <p ng-show="character.stelth >= -3"> Stelth </p>
 
     {{character.survivalProficiency}}
     {{character.survival}}
-    <p ng-show="character.survival"> Survival </p>
+    <p ng-show="character.survival >= -3"> Survival </p>
 
     {{character.passivePerception}}
-    <p ng-show="character.passivePerception"> Passive Perception </p>
+    <p ng-show="character.passivePerception >= -3"> Passive Perception </p>
 
     {{character.proficiencies}}
     <p ng-show="character.proficiencies"> Proficiencies </p>
@@ -197,22 +197,22 @@
   <div> <!-- Start Middle Column -->
 
     {{character.armorClass}}
-    <p ng-show="character.armorClass"> Armor Class </p>
+    <p ng-show="character.armorClass >= -3"> Armor Class </p>
 
     {{character.initiative}}
-    <p ng-show="character.initiative"> Initiative </p>
+    <p ng-show="character.initiative >= -3"> Initiative </p>
 
     {{character.speed}}
-    <p ng-show="character.speed"> Speed </p>
+    <p ng-show="character.speed >= -3"> Speed </p>
 
     {{character.hpMax}}
-    <p ng-show="character.hpMax"> Hit Point Maximum </p>
+    <p ng-show="character.hpMax >= -3"> Hit Point Maximum </p>
 
     {{character.hpCurrent}}
-    <p ng-show="character.hpCurrent"> Current Hit Points </p>
+    <p ng-show="character.hpCurrent >= -3"> Current Hit Points </p>
 
     {{character.hpTemp}}
-    <p ng-show="character.hpTemp"> Temporary Hit Points </p>
+    <p ng-show="character.hpTemp >= -3"> Temporary Hit Points </p>
 
     {{character.hitDieTotal}}
     <p ng-show="character.hitDieTotal"> Total </p>
@@ -241,21 +241,21 @@
     {{character.attack1}}
     <p ng-show="character.attack1"> Attack 1 </p>
     {{character.attackBonus1}}
-    <p ng-show="character.attackBonus1"> Attack 1 bonus </p>
+    <p ng-show="character.attackBonus1 >= -3"> Attack 1 bonus </p>
     {{character.attackDamage1}}
     <p ng-show="character.attackDamage1"> Attack 1 damage </p>
 
     {{character.attack2}}
     <p ng-show="character.attack2"> Attack 2 </p>
     {{character.attackBonus2}}
-    <p ng-show="character.attackBonus2"> Attack 2 bonus </p>
+    <p ng-show="character.attackBonus2 >= -3"> Attack 2 bonus </p>
     {{character.attackDamage2}}
     <p ng-show="character.attackDamage2"> Attack 2 damage </p>
 
     {{character.attack3}}
     <p ng-show="character.attack3"> Attack 3 </p>
     {{character.attackBonus3}}
-    <p ng-show="character.attackBonus3"> Attack 3 bonus </p>
+    <p ng-show="character.attackBonus3 >= -3"> Attack 3 bonus </p>
     {{character.attackDamage3}}
     <p ng-show="character.attackDamage3"> Attack 3 damage </p>
 
@@ -263,15 +263,15 @@
     <p ng-show="character.attackNotes"> Attack Notes </p>
 
     {{character.copper}}
-    <p ng-show="character.copper"> Copper </p>
+    <p ng-show="character.copper >= -3"> Copper </p>
     {{character.silver}}
-    <p ng-show="character.silver"> Silver </p>
+    <p ng-show="character.silver >= -3"> Silver </p>
     {{character.electrum}}
-    <p ng-show="character.electrum"> Electrum </p>
+    <p ng-show="character.electrum >= -3"> Electrum </p>
     {{character.gold}}
-    <p ng-show="character.gold"> Gold </p>
+    <p ng-show="character.gold >= -3"> Gold </p>
     {{character.platinum}}
-    <p ng-show="character.platinum"> Platinum </p>
+    <p ng-show="character.platinum >= -3"> Platinum </p>
 
     {{character.equipment}}
     <p ng-show="character.equipment"> Equipment </p>

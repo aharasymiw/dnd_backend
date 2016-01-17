@@ -1,3 +1,4 @@
+// Server Log Router
 var express = require('express');
 var router = express.Router();
 var path = require('path');
@@ -10,25 +11,22 @@ var Log = require('../models/logs');
 //Need a way to retrieve logs from the database
 
 router.get('/', function(req, res) {
-  Log.find({}, function(err, data) {
-    if(err) {
-      console.log('Error: ', err);
-    }
-    res.send(data);
+  Log.find({}, function(err, logs) {
+    if(err) {return handleError(err);}
+    res.send(logs);
   });
 });
 
 router.post('/', function(req, res) {
-  console.log(req.body.logname);
+  var currentTime = Date.now();
+
+  req.body.lastEdited = currentTime;
+  req.body.dateCreated = currentTime;
 
   var log = new Log();
-  log.logname = req.body.logname;
 
-  log.save(function(err, data) { //Node methods always have access to err as a first parameter, and mongoose returns data as a second
-    if(err) {
-      console.log('Error: ', err);
-    }
-
+  Log.create(req.body, function(err, data) { //Node methods always have access to err as a first parameter, and mongoose returns data as a second
+    if(err) {return handleError(err);}
     res.send(data); // Inside the save function, because it will run before save otherwise.
   });
 });

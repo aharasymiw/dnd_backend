@@ -1,52 +1,53 @@
 (function() {
-app.controller('CharacterController', ['$scope', '$http',
-function($scope, $http) {
+  app.controller('CharacterController', ['$scope', '$http',
+  function($scope, $http) {
 
-  $scope.characters = {};
-  $scope.character = {};
-
-  $scope.getCharacter = function() {
     $scope.characters = {};
+    $scope.character = {};
 
-    $http.get('/characters')
-    .then(function successCallback(response) {
-      $scope.characters = response;
-    }, function errorCallback(response) {
-    });
-  };
+    $scope.getCharacters = function() {
+      $scope.characters = {};
 
-  $scope.saveCharacter = function(character) {
-    $http.post('/characters', character)
-    .then(function successCallback(response) {
-      alert($scope.character.characterName + ' has been saved!');
-      $scope.character = {};
-    }, function errorCallback(response) {
-    });
-  };
-}]);
+      $http.get('/characters')
+      .then(function successCallback(response) {
+        $scope.characters = response;
+      }, function errorCallback(response) {
+      });
+    };
 
-app.controller('LogController', ['$scope', '$http',
-function($scope, $http) {
+    $scope.saveCharacter = function(character) {
+      $http.post('/characters', character)
+      .then(function successCallback(response) {
+        alert($scope.character.characterName + ' has been saved!');
+        $scope.character = {};
+      }, function errorCallback(response) {
+      });
+    };
+  }]);
 
-  $scope.character = {};
+  app.controller('LogController', ['$scope', '$http',
+  function($scope, $http) {
 
-  $scope.saveLog = function(log) {
-    $http.post('/logs', log)
+    $scope.logs = {};
+    $scope.log = {};
 
-    .then(function successCallback(response) {
-      alert('Log for: ' + $scope.log.date + ' has been saved!');
-      $scope.log = {};
-    }, function errorCallback(response) {
-    });
-  };
+    $scope.getLogs = function() {
+      $scope.logs = {};
 
-  $scope.getLog = function(log) {
-    $http.get('/logs', config)
-    .then(function successCallback(response) {
-    }, function errorCallback(response) {
-    });
-  };
+      $http.get('/logs')
+      .then(function successCallback(response) {
+        $scope.logs = response;
+      }, function errorCallback(response) {
+      });
+    };
 
-}]);
-
+    $scope.saveLog = function(log) {
+      $http.post('/logs', log)
+      .then(function successCallback(response) {
+        alert('Log for ' + $scope.log.playDate + ' has been saved!');
+        $scope.log = {};
+      }, function errorCallback(response) {
+      });
+    };
+  }]);
 })();

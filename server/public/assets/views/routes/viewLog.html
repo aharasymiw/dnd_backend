@@ -1,9 +1,78 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
         <ul class="nav nav-pills nav-justified">
-            <li><a href="#log/new">Create</a></li>
-            <li><a href="#log/view">View Existing</a></li>
-            <li><a href="#log/edit">Edit Existing</a></li>
+            <li><a href="log/new">Create Log</a></li>
+            <li><a href="log/view">View Logs</a></li>
+            <li><a href="log/edit">Edit Logs</a></li>
         </ul>
     </div>
+</div>
+
+<md-button ng-click="getLogs()" class="md-raised">Get Your Logs</md-button>
+
+<div ng-repeat="log in logs.data">
+
+  {{log.adventureName}}
+  <p ng-show="log.adventureName"> Adventure Name </p>
+
+  {{log.sessionNum}}
+  <p ng-show="log.sessionNum >= 0"> Session # </p>
+
+  {{log.playDate | date:shortDate}}
+  <p ng-show="log.playDate"> Date </p>
+
+  {{log.nameDM}}
+  <p ng-show="log.nameDM"> DM Name </p>
+
+  {{log.dciDM}}
+  <p ng-show="log.dciDM >= 0"> DM DCI# </p>
+
+  {{log.startingXP}}
+  <p ng-show="log.startingXP >= 0"> Starting XP </p>
+
+  {{log.deltaXP}}
+  <p ng-show="log.deltaXP >= 0"> XP Earned </p>
+
+  {{log.totalXP}}
+  <p ng-show="log.totalXP >= 0"> XP Total </p>
+
+  {{log.staringGold}}
+  <p ng-show="log.staringGold >= 0"> Starting Gold </p>
+
+  {{log.deltaGold}}
+  <p ng-show="log.deltaGold >= 0"> Gold +/- </p>
+
+  {{log.totalGold}}
+  <p ng-show="log.totalGold >= 0"> Gold Total </p>
+
+  {{log.startingDowntime}}
+  <p ng-show="log.startingDowntime >= 0"> Starting Downtime </p>
+
+  {{log.deltaDowntime}}
+  <p ng-show="log.deltaDowntime >= 0"> Downtime +/- </p>
+
+  {{log.totalDowntime}}
+  <p ng-show="log.totalDowntime >= 0"> Downtime Total </p>
+
+  {{log.startingRenown}}
+  <p ng-show="log.startingRenown >= 0"> Starting Renown </p>
+
+  {{log.deltaRenown}}
+  <p ng-show="log.deltaRenown >= 0"> Renown Earned </p>
+
+  {{log.totalRenown}}
+  <p ng-show="log.totalRenown >= 0"> Renown Total </p>
+
+  {{log.startingMagic}}
+  <p ng-show="log.startingMagic >= 0"> Starting # of Magic Items </p>
+
+  {{log.deltaMagic}}
+  <p ng-show="log.deltaMagic >= 0"> Magic Items +/- </p>
+
+  {{log.totalMagic}}
+  <p ng-show="log.totalMagic >= 0"> Magic Items Total </p>
+
+  {{log.adventureNotes}}
+  <p ng-show="log.adventureNotes"> Adventure Notes/Downtime Activity </p>
+
 </div>

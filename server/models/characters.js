@@ -12,7 +12,7 @@ var characterSchema = new Schema(
     race: String,
     alignment: String,
     experience: Number,
-    dciNumber: Number,
+    dciPlayer: Number,
     strength: Number,
     strengthMod: Number,
     dexterity: Number,

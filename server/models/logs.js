@@ -4,8 +4,31 @@ var Schema = mongoose.Schema;
 
 var logSchema = new Schema(
   {
-    //key: valueType,
-    date: Date
+    dciPlayer: Number,
+    characterName: String,
+    adventureName: String,
+    sessionNum: Number,
+    playDate: Date,
+    nameDM: String,
+    dciDM: Number,
+    startingXP: Number,
+    deltaXP: Number,
+    totalXP: Number,
+    staringGold: Number,
+    deltaGold: Number,
+    totalGold: Number,
+    startingDowntime: Number,
+    deltaDowntime: Number,
+    totalDowntime: Number,
+    startingRenown: Number,
+    deltaRenown: Number,
+    totalRenown: Number,
+    startingMagic: Number,
+    deltaMagic: Number,
+    totalMagic: Number,
+    adventureNotes: String,
+    dateCreated: Date,
+    lastEdited: Date
   }
 );
 

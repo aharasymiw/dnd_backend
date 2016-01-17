@@ -1,6 +1,7 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute', 'ngMaterial']);
 
-app.config(['$routeProvider', function($routeProvider) {
+app.config(['$routeProvider', '$locationProvider',
+function($routeProvider, $locationProvider) {
   $routeProvider.
     when('/home', {
       templateUrl: '/assets/views/routes/home.html',
@@ -33,4 +34,7 @@ app.config(['$routeProvider', function($routeProvider) {
     otherwise({
       redirectTo: 'home'
     });
+
+  $locationProvider.html5Mode(true);
+
 }]);

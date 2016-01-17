@@ -1,18 +1,18 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3 text-center">
         <ul class="nav nav-pills nav-justified">
-            <li><a href="#character/new">Create</a></li>
-            <li><a href="#character/view">View Existing</a></li>
-            <li><a href="#character/edit">Edit Existing</a></li>
+            <li><a href="character/new">Create Character</a></li>
+            <li><a href="character/view">View Characters</a></li>
+            <li><a href="character/edit">Edit Characters</a></li>
         </ul>
     </div>
 </div>
 
-<form id="character">
+<form id="character" novalidate>
 
   <div> <!-- Start Top of Character Sheet -->
 
-    <input id="characterName" ng-model="character.characterName" type="text">
+    <input id="characterName" ng-model="character.characterName" type="text" required>
     <label for="characterName"> Character Name
 
     <input id="characterClass" ng-model="character.characterClass" type="text">
@@ -36,8 +36,8 @@
     <input id="experience" ng-model="character.experience" type="number">
     <label for="experience"> Experience Points
 
-    <input id="dciNumber" ng-model="character.dciNumber" type="number">
-    <label for="dciNumber"> DCI Number
+    <input id="dciPlayer" ng-model="character.dciPlayer" type="number">
+    <label for="dciPlayer"> DCI Number
 
   </div> <!-- End Top of Character Sheet -->
 
@@ -295,6 +295,6 @@
 
   </div> <!-- End Right Column -->
 
-  <input type="submit" ng-click="saveCharacter(character)" value="Save">
+  <md-button ng-click="saveCharacter(character)" class="md-raised">Save</md-button>
 
 </form>
