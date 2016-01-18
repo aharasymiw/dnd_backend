@@ -1,4 +1,4 @@
-// Schema, dictates how users are saved into mongo
+// Schema, dictates how characters are saved into mongo
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 

@@ -1,14 +1,9 @@
 // Server Log Router
 var express = require('express');
 var router = express.Router();
-var path = require('path');
 
 var mongoose = require('mongoose');
 var Log = require('../models/logs');
-
-//Need to bring in a Schema
-//Need a way to write a 'log' to the database
-//Need a way to retrieve logs from the database
 
 router.get('/', function(req, res) {
   Log.find({}, function(err, logs) {

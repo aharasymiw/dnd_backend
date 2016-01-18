@@ -50,4 +50,30 @@
       });
     };
   }]);
+
+  app.controller('HomeController', ['$scope', '$http',
+  function($scope, $http) {
+
+    $scope.users = {};
+    $scope.user = {};
+
+    $scope.getUsers = function() {
+      $scope.users = {};
+
+      $http.get('/users')
+      .then(function successCallback(response) {
+        $scope.users = response;
+      }, function errorCallback(response) {
+      });
+    };
+
+    $scope.saveUser = function(user) {
+      $http.post('/users', users)
+      .then(function successCallback(response) {
+        alert('User: ' + $scope.user.userName + ' has been saved!');
+        $scope.user = {};
+      }, function errorCallback(response) {
+      });
+    };
+  }]);
 })();

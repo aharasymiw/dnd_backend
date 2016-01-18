@@ -1,0 +1,4 @@
+module.exports = {
+  'secret': 'Replace with a Secret',
+  'database': 'mongodb://localhost:27017/dnd'
+};

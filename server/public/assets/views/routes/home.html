@@ -1,2 +1,18 @@
-<p>Welcome Home</p>
-<p>Here is a paragraph: {{thing}}</p>
+<form>
+  <label for="userName"> User Name
+  <input id="userName" ng-model="user.userName" type="username" required>
+
+  <label for="dciUser"> DCI Number
+  <input id="dciUser" ng-model="user.dciUser" type="number" required>
+
+  <label for="dm"> Are you a DM?
+  <input id="dm" ng-model="user.dm" type="checkbox" required>
+
+  <label for="admin"> Are you an adminstrator?
+  <input id="admin" ng-model="user.admin" type="checkbox" required>
+
+  <label for="password"> Password
+  <input id="password" ng-model="user.password" type="password" required>
+
+  <md-button ng-click="saveUser(user)" class="md-raised">Save</md-button>
+</form>

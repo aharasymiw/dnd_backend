@@ -3,3 +3,4 @@ node_modules/
 .idea/
 ideas.txt
 .jscsrc
+config.js

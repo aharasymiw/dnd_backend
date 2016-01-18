@@ -5,7 +5,7 @@ function($routeProvider, $locationProvider) {
   $routeProvider.
     when('/home', {
       templateUrl: '/assets/views/routes/home.html',
-      //controller: 'SomeController'
+      controller: 'HomeController'
     }).when('/character', {
       templateUrl: '/assets/views/routes/character.html',
       controller: 'CharacterController'
