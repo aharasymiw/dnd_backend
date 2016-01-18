@@ -36,8 +36,8 @@ characterDB.once('open', function(err) {
 //   }
 //   console.log('Adventure Log Database connected.');
 // });
-app.use('/characters', characters);
-app.use('/logs', logs);
+app.use('/api/characters', characters);
+app.use('/api/logs', logs);
 app.use('/', index);
 app.use('/*', index);
 

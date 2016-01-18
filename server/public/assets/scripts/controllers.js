@@ -8,7 +8,7 @@
     $scope.getCharacters = function() {
       $scope.characters = {};
 
-      $http.get('/characters')
+      $http.get('/api/characters')
       .then(function successCallback(response) {
         $scope.characters = response;
       }, function errorCallback(response) {
@@ -16,7 +16,7 @@
     };
 
     $scope.saveCharacter = function(character) {
-      $http.post('/characters', character)
+      $http.post('/api/characters', character)
       .then(function successCallback(response) {
         alert($scope.character.characterName + ' has been saved!');
         $scope.character = {};
@@ -34,7 +34,7 @@
     $scope.getLogs = function() {
       $scope.logs = {};
 
-      $http.get('/logs')
+      $http.get('/api/logs')
       .then(function successCallback(response) {
         $scope.logs = response;
       }, function errorCallback(response) {
@@ -42,7 +42,7 @@
     };
 
     $scope.saveLog = function(log) {
-      $http.post('/logs', log)
+      $http.post('/api/logs', log)
       .then(function successCallback(response) {
         alert('Log for ' + $scope.log.playDate + ' has been saved!');
         $scope.log = {};
