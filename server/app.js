@@ -18,7 +18,9 @@ var users = require('./routes/users');
 app.set('port', process.env.PORT || 3000);
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({
+  extended: false,
+}));
 app.use(morgan('dev'));
 
 //DB Stuff
@@ -29,6 +31,7 @@ appDB.once('open', function(err) {
   if(err) {
     console.log('ERROR: ', err);
   }
+
   console.log('Character Database connected.');
 });
 
